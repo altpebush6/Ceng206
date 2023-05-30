@@ -4,9 +4,7 @@ class AMyCharacter : private ACharacter {
         
         WalkSpeed = 300.0f;
 
-        
         RunSpeed = 600.0f;
-
         
         JumpHeight = 500.0f;
 
