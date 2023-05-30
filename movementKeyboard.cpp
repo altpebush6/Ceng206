@@ -58,4 +58,17 @@ class AMyCharacter : private ACharacter {
             UE_LOG(LogTemp, Error, TEXT("Error: %s"), *FString(e.what()));
         }
     }
+   
+    inline void AMyCharacter::MoveForward(float Value)
+    {
+        try
+        {
+            FVector Forward = GetActorForwardVector();
+            AddMovementInput(Forward, Value * (bIsRunning ? RunSpeed : WalkSpeed));
+        }
+        catch (const std::exception& e)
+        {
+            UE_LOG(LogTemp, Error, TEXT("Error: %s"), *FString(e.what()));
+        }
+    }
 };
