@@ -96,4 +96,25 @@ class AMyCharacter : private ACharacter {
             UE_LOG(LogTemp, Error, TEXT("Error: %s"), *FString(e.what()));
         }
     }
+
+    void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+    {
+        try
+        {
+            Super::SetupPlayerInputComponent(PlayerInputComponent);
+
+            PlayerInputComponent->BindAxis("MoveForward", this, &AMyCharacter::MoveForward);
+
+            PlayerInputComponent->BindAxis("MoveRight", this, &AMyCharacter::MoveRight);
+
+            PlayerInputComponent->BindAction("Run", IE_Pressed, this, &AMyCharacter::StartRunning);
+            PlayerInputComponent->BindAction("Run", IE_Released, this, &AMyCharacter::StopRunning);
+
+            PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &AMyCharacter::Jump);
+        }
+        catch (const std::exception& e)
+        {
+            UE_LOG(LogTemp, Error, TEXT("Error: %s"), *FString(e.what()));
+        }
+    }
 };
