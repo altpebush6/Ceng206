@@ -21,4 +21,16 @@ class AMyCharacter : private ACharacter {
             UE_LOG(LogTemp, Error, TEXT("Error: %s"), *FString(e.what()));
         }
     }
+    AMyCharacter::~AMyCharacter()
+    {
+        try
+        {
+            cout << "Object is destroying" << WalkSpeed << RunSpeed << JumpHeight << endl:
+        }
+        catch (const std::exception& e)
+        {
+            
+            UE_LOG(LogTemp, Error, TEXT("Error: %s"), *FString(e.what()));
+        }
+    }
 };
