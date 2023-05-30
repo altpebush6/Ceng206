@@ -33,6 +33,11 @@ protected:
     void StopRunning();
     void Jump();
 
+    // Collect Ghost
+    UFUNCTION(BlueprintCallable)
+        void AutoCollectGhost();
+
 private:
     bool bIsRunning;
+    int32 GhostCount;
 };
