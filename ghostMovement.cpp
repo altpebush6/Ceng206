@@ -1,6 +1,7 @@
 #include "CoreMinimal.h"
 #include "Actor.h"
 #include "movement.h"
+#include "vector.h"
 
 UCLASS()
 class YOURPROJECT_API AMyGhostActor : public AActor
