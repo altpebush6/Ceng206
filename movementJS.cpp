@@ -33,11 +33,34 @@ class AMyCharacter : private ACharacter {
      
         PlayerInputComponent->BindAxis("MoveForward", this, &AMyCharacter::MoveForward);
         PlayerInputComponent->BindAxis("MoveRight", this, &AMyCharacter::MoveRight);
-
-        // Koşma girişleri tanımlanır
         PlayerInputComponent->BindAction("Run", IE_Pressed, this, &AMyCharacter::StartRunning);
         PlayerInputComponent->BindAction("Run", IE_Released, this, &AMyCharacter::StopRunning);
-
-        // Zıplama girişi tanımlanır
         PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &AMyCharacter::Jump);
     }
+    void AMyCharacter::MoveForward(float Value)
+    {
+        FVector Forward = GetActorForwardVector();
+        AddMovementInput(Forward, Value * (bIsRunning ? RunSpeed : WalkSpeed));
+    }
+
+    void AMyCharacter::MoveRight(float Value)
+    {
+        FVector Right = GetActorRightVector();
+        AddMovementInput(Right, Value * (bIsRunning ? RunSpeed : WalkSpeed));
+    }
+
+    void AMyCharacter::StartRunning()
+    {
+        bIsRunning = true;
+    }
+
+    void AMyCharacter::StopRunning()
+    {
+        bIsRunning = false;
+    }
+
+    void AMyCharacter::Jump()
+    {
+        Super::Jump();
+    }
+};
