@@ -71,4 +71,17 @@ class AMyCharacter : private ACharacter {
             UE_LOG(LogTemp, Error, TEXT("Error: %s"), *FString(e.what()));
         }
     }
+   
+    inline void AMyCharacter::MoveRight(float Value)
+    {
+        try
+        {
+            FVector Right = GetActorRightVector();
+            AddMovementInput(Right, Value * (bIsRunning ? RunSpeed : WalkSpeed));
+        }
+        catch (const std::exception& e)
+        {
+            UE_LOG(LogTemp, Error, TEXT("Error: %s"), *FString(e.what()));
+        }
+    }
 };
