@@ -84,4 +84,16 @@ class AMyCharacter : private ACharacter {
             UE_LOG(LogTemp, Error, TEXT("Error: %s"), *FString(e.what()));
         }
     }
+   
+    inline void AMyCharacter::Jump()
+    {
+        try
+        {
+            Super::Jump();
+        }
+        catch (const std::exception& e)
+        {
+            UE_LOG(LogTemp, Error, TEXT("Error: %s"), *FString(e.what()));
+        }
+    }
 };
