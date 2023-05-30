@@ -24,3 +24,11 @@ void AMyCharacter::AutoCollectGhost()
         }
     }
 }
+
+void AMyCharacter::Tick(float DeltaSeconds)
+{
+    Super::Tick(DeltaSeconds);
+
+    // The character is constantly monitored for automatically collecting ghosts.
+    AutoCollectGhost();
+}
