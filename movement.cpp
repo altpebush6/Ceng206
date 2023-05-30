@@ -10,6 +10,7 @@ class YOURPROJECT_API ACharacter
     GENERATED_BODY()
 
 public:
+    movementKeyboard keyboard = new movementKeyboard();
     ACharacter();
 
 protected:
