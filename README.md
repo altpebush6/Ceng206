@@ -1,4 +1,4 @@
-##### *Ceng206 Hide And Seek Game Project*
+## *Ceng206 Hide And Seek Game Project*
 
 ------------
 ###### Report
