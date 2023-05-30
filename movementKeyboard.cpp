@@ -33,4 +33,29 @@ class AMyCharacter : private ACharacter {
             UE_LOG(LogTemp, Error, TEXT("Error: %s"), *FString(e.what()));
         }
     }
+   inline void AMyCharacter::StartRunning()
+    {
+        try
+        {
+            bIsRunning = true;
+        }
+        catch (const std::exception& e)
+        {
+            
+            UE_LOG(LogTemp, Error, TEXT("Error: %s"), *FString(e.what()));
+        }
+    }
+
+    inline void AMyCharacter::StopRunning()
+    {
+        try
+        {
+            bIsRunning = false;
+        }
+        catch (const std::exception& e)
+        {
+            
+            UE_LOG(LogTemp, Error, TEXT("Error: %s"), *FString(e.what()));
+        }
+    }
 };
