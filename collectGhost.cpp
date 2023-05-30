@@ -1,4 +1,4 @@
-/ Ghost size
+// Ghost size
 int32 GhostCount = 0;
 const int32 WinningGhostCount = 7;
 
