@@ -1,5 +1,4 @@
-## *Ceng206 Hide And Seek Game Project*
-
+*Ceng206 Hide And Seek Game Project*
 ------------
 ###### Report
 >    In this project, we implemented a hide-and-seek game by using C++ with Unreal Engine 5. We designed our game to be split screen. It allows players to control one character with the keyboard and the other character with a gamepad simultaneously. Our game provides users with a visually appealing and immersive experience, both in terms of graphics and physics. 
