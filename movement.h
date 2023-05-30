@@ -35,5 +35,4 @@ protected:
 
 private:
     bool bIsRunning;
-    int32 GhostCount;
 };
