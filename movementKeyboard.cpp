@@ -1,0 +1,3 @@
+class AMyCharacter : private ACharacter {
+  
+};
