@@ -7,7 +7,7 @@
 #include "RandomMovementActor.generated.h"
 
 UCLASS()
-class YOURPROJECT_API ARandomMovementActor : public AActor
+class MYRPROJECT2_API ARandomMovementActor : public AActor
 {
     GENERATED_BODY()
 
