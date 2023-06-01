@@ -4,7 +4,7 @@
 #include "vector.h"
 int32 ghostSize = 13;
 UCLASS()
-class YOURPROJECT_API AMyGhostActor : public AActor
+class MYPROJECT2_API AMyGhostActor : public AActor
 {
     GENERATED_BODY()
 
