@@ -5,7 +5,7 @@
 #include "MyCharacter.generated.h"
 
 UCLASS()
-class YOURPROJECT_API ACharacter
+class MYPROJECT2_API ACharacter
 {
     GENERATED_BODY()
 
